@@ -22,7 +22,14 @@ dotnet run --project MvcApp/
 ```
 App runs on <http://localhost:5000>
 
-To test coverage, open a new terminal and run:
+To test coverage, install the playwright:
+
+```
+dotnet tool install --global Microsoft.Playwright.CLI
+playwright install chromium --with-deps
+```
+
+Then open a new terminal and run:
 
 ```
 dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
@@ -30,11 +37,12 @@ dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 
 The test result should be shown as:
 
+```
 Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 1 s - IntegrationTest.dll (net8.0)
 [coverlet]
 Calculating coverage result...
 Generating report 'dotnetcoreplugins-poc-coverage/IntegrationTest/coverage.cobertura.xml'
-```
+
 +--------------+------+--------+--------+
 | Module       | Line | Branch | Method |
 +--------------+------+--------+--------+
