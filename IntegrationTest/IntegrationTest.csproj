@@ -25,4 +25,9 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\MvcApp\MvcApp.csproj"/>
+        <ProjectReference Include="..\MvcAppPlugin\MvcAppPlugin.csproj"/>
+    </ItemGroup>
+
 </Project>

@@ -11,7 +11,7 @@ public class PlaywrightPluginIntegrationTest : IAsyncLifetime
     public async Task InitializeAsync()
     {
         var playwright = await Playwright.CreateAsync();
-        _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = true });
+        _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false });
         var context = await _browser.NewContextAsync();
         _page = await context.NewPageAsync();
     }
