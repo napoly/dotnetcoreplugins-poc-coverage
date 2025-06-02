@@ -1,4 +1,6 @@
 ﻿using Microsoft.Playwright;
+using MvcAppPlugin;
+using MvcWebApp;
 using Xunit;
 
 namespace IntegrationTest;
@@ -29,4 +31,16 @@ public class PlaywrightPluginIntegrationTest : IAsyncLifetime
         var textContent = await _page.InnerTextAsync("p");
         Assert.Equal("Hello world from Plugin!", textContent);
     }
+
+    /*[Fact]
+    public void CallPluginFunctionDirectly()
+    {
+        new MyPluginController().Index();
+    }
+    
+    [Fact]
+    public void CreateWebHostBuilder()
+    {
+        ProgramMvcApp.CreateWebHostBuilder(["test"]);
+    }*/
 }

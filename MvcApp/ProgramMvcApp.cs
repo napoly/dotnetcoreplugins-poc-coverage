@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace MvcWebApp
 {
-    public class Program
+    public class ProgramMvcApp
     {
         public static void Main(string[] args)
         {
